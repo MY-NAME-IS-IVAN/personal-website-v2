@@ -3,7 +3,7 @@ import { FaGithub } from 'react-icons/fa6';
 
 const GitHubLink = () => {
   return (
-    <SimpleLink link='https://github.com/MY-NAME-IS-IVAN' className='github'>
+    <SimpleLink link='https://github.com/MY-NAME-IS-IVAN' className='github' header='github'>
       <FaGithub />
     </SimpleLink>
   );

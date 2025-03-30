@@ -6,6 +6,7 @@ const LinkedInLink = () => {
     <SimpleLink
       link='https://www.linkedin.com/in/i-am-ivan/'
       className='linkedin'
+      header='linkedin'
     >
       <FaLinkedinIn />
     </SimpleLink>

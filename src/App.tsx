@@ -15,6 +15,9 @@ import GitHubLink from './components/grid-elements/GitHubLink';
 import InstagramLink from './components/grid-elements/InstagramLink';
 import LinkedInLink from './components/grid-elements/LinkedInLink';
 import ThemeToggle from './components/grid-elements/ThemeToggle';
+import TechnicalSkills from './components/grid-elements/TechnicalSkills';
+import MyResumeLink from './components/grid-elements/MyResumeLink';
+import ContanctInformation from './components/grid-elements/ContanctInformation';
 
 function App() {
   return (
@@ -22,17 +25,20 @@ function App() {
       <Header />
       <main className='grid-section'>
         <Summary />
-        <MusicAnalyzerProject isVertical={true} />
-        <GitHubLink />
-        <ThemeToggle />
-        <InstagramLink />
-        <IBMCertificate />
-        <GoogleMapsLocation />
+        <MyResumeLink />
         <LinkedInLink />
+        <TechnicalSkills />
+        <MusicAnalyzerProject isVertical={false} />
+        <IBMCertificate />
         <MetaCertificate />
         <DeadCellsProject isVertical={false} />
-        <MoodCompanionProject isVertical={false} />
         <DrOilProject isVertical={true} />
+        <MoodCompanionProject isVertical={true} />
+        <GitHubLink />
+        <ThemeToggle />
+        <GoogleMapsLocation />
+        <ContanctInformation />
+        <InstagramLink />
       </main>
     </>
   );
