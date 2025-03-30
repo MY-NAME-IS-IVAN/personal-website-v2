@@ -1,0 +1,55 @@
+.main-header
+  width: 100%
+  height: 36px
+  margin-bottom: 48px
+  position: relative
+  display: flex
+  align-items: center
+
+  .name-title
+    position: absolute
+    left: 0
+    font-weight: 900
+    font-size: 2rem
+
+  .contact-button
+    position: absolute
+    right: 0
+
+  .segmented-control-navigation
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+
+    .segmented-control-list
+      list-style-type: none
+      display: flex
+      border-radius: 8px
+      background-color: #76768012
+      padding: 2px
+
+      li
+        position: relative
+        cursor: pointer
+        height: 24px
+        font-size: 13px
+        border-radius: 6px
+        display: inline-flex
+        justify-content: center
+        align-items: center
+        width: 120px
+
+      li:not(:last-child)::after
+        content: ''
+        position: absolute
+        background-color: #8E8E93
+        width: 1px
+        height: 12px
+        right: -1px
+        border-radius: 10px
+        z-index: -1
+
+      li.active
+        background-color: var(--white-background-color)
+        border: 1px solid #00000004
+        box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.04)

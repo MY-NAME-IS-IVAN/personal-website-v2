@@ -1,0 +1,205 @@
+main.grid-section
+  display: grid
+  grid-template-columns: repeat(4, 300px)
+  grid-template-rows: repeat(6, 300px)
+  gap: 20px
+  grid-auto-flow: dense
+
+  .grid-block
+    background-color: var(--primary-white-color)
+    padding: 24px
+    box-shadow: var(--primary-card-box-shadow)
+    border-radius: var(--card-border-radius)
+    overflow: hidden
+
+  .grid-block.interactive
+    cursor: pointer
+    transition: box-shadow 0.3s cubic-bezier(0,0,.5,1), transform 0.3s cubic-bezier(0,0,.5,1)
+
+  .grid-block.interactive:hover
+    box-shadow: var(--hover-card-box-shadow)
+    transform: var(--hover-card-scale)
+
+  .summary
+    grid-column: span 2
+    grid-row: span 2
+    display: flex
+    flex-direction: column
+    line-height: 2.5
+
+    .top-container
+      flex: 1
+      display: flex
+      justify-content: space-between
+
+    .bottom-container
+      flex: 1
+
+    img.emoji-picture
+      width: 240px
+      height: 240px
+
+  .simple-link
+    grid-column: span 1
+    grid-row: span 1
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 96px
+
+  .simple-link.github
+    color: var(--primary-white-color)
+    background-color: var(--dark-gray-color)
+
+  .simple-link.instagram
+    color: var(--primary-white-color)
+    background: radial-gradient(
+      circle farthest-corner at 28% 100%,
+    #fcdf8f 0%,
+    #fbd377 10%,
+    #fa8e37 22%,
+    #f73344 35%,
+      transparent 65%
+    ), linear-gradient(145deg, #3051f1 10%, #c92bb7 70%)
+
+  .simple-link.linkedin
+    color: var(--primary-white-color)
+    background-color: var(--primary-blue-color)
+
+  .project
+    display: flex
+    hgroup
+      margin-bottom: 20px
+    .button-container
+      display: flex
+      align-items: center
+      justify-content: center
+    .title
+      font-weight: 700
+      line-height: 1
+    .technologies-list
+      font-weight: 700
+      line-height: 1.75
+      display: flex
+      list-style: none
+      gap: 12px
+      font-size: 1.5rem
+    .subtitle
+      text-transform: uppercase
+      font-weight: 900
+      opacity: 0.5
+      font-size: 0.75rem
+    img.project-picture
+      aspect-ratio: 1 / 1
+      border-radius: 16px
+
+  .project.vertical
+    grid-column: span 1
+    grid-row: span 2
+    flex-direction: column
+
+    img.project-picture
+      width: 100%
+      margin-bottom: 12px
+
+  .project.horizontal
+    grid-column: span 2
+    grid-row: span 1
+    flex-direction: row
+    justify-content: space-between
+    gap: 12px
+
+    img.project-picture
+      height: 100%
+
+  .certificate
+    grid-column: span 1
+    grid-row: span 2
+    text-decoration: none
+    color: unset
+
+    .company-logo
+      width: 100%
+
+    .subtitle
+      font-weight: 700
+      opacity: 0.5
+
+    hgroup
+      margin-bottom: 12px
+
+    .information-container
+      margin-bottom: 32px
+
+    img.certificate-picture
+      width: 100%
+      border-radius: 20px
+
+  .location
+    grid-column: span 2
+    grid-row: span 2
+    padding: 0
+    position: relative
+
+    .face-picture-container
+      width: 80px
+      height: 80px
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+
+    .face-picture
+      width: 100%
+      height: 100%
+      animation: rotate-face 5s infinite ease
+
+      @keyframes rotate-face
+        0%
+          transform: rotate(-20deg)
+        50%
+          transform: rotate(20deg)
+        100%
+          transform: rotate(-20deg)
+
+    .zoom-buttons
+      position: absolute
+      bottom: 0
+      width: 100%
+      display: flex
+      justify-content: space-between
+      padding: 24px
+
+      button
+        width: 36px
+        height: 36px
+        border-radius: 50%
+        transition: opacity 0.3s cubic-bezier(0,0,.5,1)
+
+      button.hidden
+        opacity: 0
+
+  .theme-toggle-container
+    display: flex
+    justify-content: center
+    align-items: center
+
+    .theme-toggle
+      position: relative
+      padding: 0 3px
+      width: 70px
+      height: 36px
+      cursor: pointer
+      background-color: #ccc
+      border-radius: 980px
+
+      .thumb
+        position: absolute
+        width: 31px
+        height: 31px
+        top: 50%
+        left: 3px
+        background-color: #fff
+        border-radius: 50%
+        transform: translateY(-50%)
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2)
