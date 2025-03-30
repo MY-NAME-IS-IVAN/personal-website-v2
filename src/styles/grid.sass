@@ -32,12 +32,23 @@ main.grid-section
       display: flex
       justify-content: space-between
 
+      .emoji-container
+        animation: rotate-emoji 5s infinite ease-in-out;
+
+      @keyframes rotate-emoji
+        0%
+          transform: rotate(-5deg)
+        50%
+          transform: rotate(5deg)
+        100%
+          transform: rotate(-5deg)
+
     .bottom-container
       flex: 1
 
     img.emoji-picture
-      width: 240px
-      height: 240px
+      width: 220px
+      height: 220px
 
   .simple-link
     grid-column: span 1
@@ -174,10 +185,11 @@ main.grid-section
         width: 36px
         height: 36px
         border-radius: 50%
-        transition: opacity 0.3s cubic-bezier(0,0,.5,1)
+        transition: all 0.3s cubic-bezier(0,0,.5,1)
 
       button.hidden
         opacity: 0
+        cursor: default
 
   .theme-toggle-container
     display: flex

@@ -22,17 +22,17 @@ function App() {
       <Header />
       <main className='grid-section'>
         <Summary />
-        <GoogleMapsLocation />
-        <IBMCertificate />
-        <MetaCertificate />
-        <DrOilProject isVertical={false} />
-        <DeadCellsProject isVertical={false} />
-        <MusicAnalyzerProject isVertical={false} />
-        <MoodCompanionProject isVertical={false} />
+        <MusicAnalyzerProject isVertical={true} />
         <GitHubLink />
-        <InstagramLink />
-        <LinkedInLink />
         <ThemeToggle />
+        <InstagramLink />
+        <IBMCertificate />
+        <GoogleMapsLocation />
+        <LinkedInLink />
+        <MetaCertificate />
+        <DeadCellsProject isVertical={false} />
+        <MoodCompanionProject isVertical={false} />
+        <DrOilProject isVertical={true} />
       </main>
     </>
   );
