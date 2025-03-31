@@ -5,28 +5,55 @@
   position: relative
   display: flex
   align-items: center
+  padding: 0 20px
+  transition: background-color 0.3s ease
+
+  @media ( max-width: 950px)
+    flex-direction: column
+    height: auto
+    gap: 20px
 
   .name-title
     position: absolute
-    left: 0
+    left: 20px
     font-weight: 900
     font-size: 2rem
+    @media ( max-width: 950px)
+      position: relative
+      left: unset
 
   .contact-button
     position: absolute
-    right: 0
+    right: 20px
+    @media ( max-width: 950px)
+      position: relative
+      right: unset
 
   .segmented-control-navigation
     position: absolute
     left: 50%
     transform: translateX(-50%)
+    width: 100%
+    max-width: 600px
+    margin: 0 20px
+    @media ( max-width: 950px)
+      position: relative
+      left: unset
+      transform: none
 
     .segmented-control-list
       list-style-type: none
       display: flex
       border-radius: 8px
-      background-color: #76768012
+      background-color: rgba(118, 118, 128, 0.12)
       padding: 2px
+
+      .dark-mode &
+        background-color: #1c1c1e
+        border: 1px solid rgba(255, 255, 255, 0.1)
+
+      @media ( max-width: 630px)
+        flex-direction: column
 
       li
         position: relative
@@ -38,18 +65,41 @@
         justify-content: center
         align-items: center
         width: 120px
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1)
+        -webkit-tap-highlight-color: transparent
+        margin: 0
+        border: none
+        color: #1c1c1e
 
-      li:not(:last-child)::after
+        .dark-mode &
+          color: rgba(255, 255, 255, 0.9)
+
+        @media ( max-width: 630px)
+          width: 100%
+
+        &:not(:last-child)
+          margin-right: 2px
+
+        &.active
+          background-color: #ffffff
+          color: var(--primary-blue-color)
+
+          .dark-mode &
+            background-color: #0A84FF
+            color: #ffffff
+
+      li:not(:last-child):not(.active)::after
         content: ''
         position: absolute
-        background-color: #8E8E93
+        background-color: rgba(118, 118, 128, 0.2)
         width: 1px
         height: 12px
-        right: -1px
+        right: -3px
         border-radius: 10px
         z-index: -1
 
-      li.active
-        background-color: var(--white-background-color)
-        border: 1px solid #00000004
-        box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.04)
+        @media ( max-width: 630px)
+          display: none
+
+        .dark-mode &
+          background-color: rgba(255, 255, 255, 0.2)

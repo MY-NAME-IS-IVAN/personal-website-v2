@@ -1,7 +1,6 @@
 import Project from '../grid-elements-templates/Project';
 import MusicAnalyzerPicture from '../../assets/projects-pictures/music-personality-analyzer.jpg';
 
-
 import { SiTypescript, SiTailwindcss } from 'react-icons/si';
 import { AiFillOpenAI } from "react-icons/ai";
 import { RiReactjsLine } from "react-icons/ri";

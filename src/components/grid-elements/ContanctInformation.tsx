@@ -11,7 +11,7 @@ const ContanctInformation = () => {
         </li>
       </ul>
       <div className='button-container'>
-        <button className='default-button contact-button'>Contact</button>
+        <a href="mailto:ivan.lordofdonuts@gmail.com" className='default-button contact-button'>Contact</a>
       </div>
     </div>
   );
